@@ -2,7 +2,7 @@
 # Company: eXonware.com
 # Author: Eng. Muhammad AlShehri
 # Email: connect@exonware.com
-# Version: 0.0.1
+# Version: 0.0.1.1
 # Generation Date: February 2, 2025
 #
 # This file contains all dependencies needed for {xentity}
@@ -55,7 +55,7 @@ mypy>=0.950                          # Static type checking
 # Python Version Compatibility:
 # - Minimum: Python 3.8 (for maximum compatibility)
 # - Recommended: Python 3.8+ for best compatibility
-# - Tested: Python 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
+# - Tested: Python 3.8, 3.9, 3.10, 3.11, 3.12
 #
 # Platform Compatibility:
 # - Windows: Full support

@@ -1,10 +1,10 @@
-name: Publish to PyPI
+name: Dual PyPI Publish - exonware-xwentity & xwentity
 
 on:
   push:
     tags:
       - 'v*'  # Triggers on version tags like v0.0.2, v1.0.0, etc.
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:  # Allows manual trigger of the workflow
 
 jobs:
   publish:
@@ -23,11 +23,51 @@ jobs:
         python -m pip install --upgrade pip
         pip install build twine
     
-    - name: Build package
-      run: python -m build
+    - name: Build exonware-xwentity package
+      run: |
+        echo "Building exonware-xwentity package..."
+        python -m build
+        
+    - name: Build xwentity package
+      run: |
+        echo "Building xwentity package..."
+        cp pyproject.toml pyproject.backup.toml
+        cp pyproject.xwentity.toml pyproject.toml
+        python -m build
+        mv pyproject.backup.toml pyproject.toml
     
-    - name: Publish to PyPI
+    - name: List built packages
+      run: |
+        echo "Built packages:"
+        find dist -name "*.whl" -o -name "*.tar.gz" | sort
+    
+    - name: Publish exonware-xwentity to PyPI
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-      run: twine upload dist/*
+      run: |
+        echo "Publishing exonware-xwentity to PyPI..."
+        ls -la dist/
+        twine upload dist/exonware_xwentity-*.whl dist/exonware_xwentity-*.tar.gz
+    
+    - name: Publish xwentity to PyPI
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        echo "Publishing xwentity to PyPI..."
+        twine upload dist/xwentity-*.whl dist/xwentity-*.tar.gz
+        
+    - name: Success notification
+      run: |
+        echo "Successfully published both packages:"
+        echo "   exonware-xwentity v${{ github.ref_name }}"
+        echo "   xwentity v${{ github.ref_name }}"
+        echo ""
+        echo "PyPI URLs:"
+        echo "   https://pypi.org/project/exonware-xwentity/"
+        echo "   https://pypi.org/project/xwentity/"
+        echo ""
+        echo "Install with:"
+        echo "   pip install exonware-xwentity"
+        echo "   pip install xwentity"

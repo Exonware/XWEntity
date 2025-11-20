@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "exonware-xentity"
-version = "0.0.1"
+dynamic = ["version"]
 description = "Entity management and relationship modeling library"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -20,12 +20,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10", 
     "Programming Language :: Python :: 3.11", 
     "Programming Language :: Python :: 3.12", 
-    "Programming Language :: Python :: 3.13", 
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    # Add your dependencies here
-    # Example: "requests>=2.25.0",
+    "exonware-xwsystem>=0.0.1",
 ]
 
 [[project.authors]]
@@ -55,14 +53,14 @@ Documentation = "https://github.com/exonware/xentity#readme"
 
 [tool.black]
 line-length = 88
-target-version = [ "py313",]
+target-version = [ "py38",]
 
 [tool.isort]
 profile = "black"
 line_length = 88
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "0.0.1.1"
 strict = true
 warn_return_any = true
 warn_unused_configs = true
@@ -89,6 +87,9 @@ markers = [
     "xentity_unit: Unit tests for individual components", 
     "xentity_integration: Integration tests between components", 
 ]
+
+[tool.hatch.version]
+path = "src/exonware/xwentity/version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = [ "src/exonware",]
