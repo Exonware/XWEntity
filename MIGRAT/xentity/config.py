@@ -111,7 +111,7 @@ class xEntityConfigManager:
         """Set global performance mode."""
         with self._lock:
             self._config.performance_mode = mode
-            from src.xlib.xsystem import get_logger
+            from src.xlib.xwsystem import get_logger
             logger = get_logger(__name__)
             logger.info(f"🔧 xEntity performance mode set to: {mode.value}")
     

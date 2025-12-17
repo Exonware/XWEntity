@@ -3,11 +3,11 @@ requires = [ "hatchling",]
 build-backend = "hatchling.build"
 
 [project]
-name = "exonware-xentity"
+name = "exonware-xwentity"
 dynamic = ["version"]
 description = "Entity management and relationship modeling library"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 keywords = [ "entity", "relationship", "modeling", "management", "orm", "exonware",]
 classifiers = [ 
     "Development Status :: 3 - Alpha", 
@@ -15,15 +15,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License", 
     "Operating System :: OS Independent", 
     "Programming Language :: Python :: 3", 
-    "Programming Language :: Python :: 3.8", 
-    "Programming Language :: Python :: 3.9", 
-    "Programming Language :: Python :: 3.10", 
-    "Programming Language :: Python :: 3.11", 
     "Programming Language :: Python :: 3.12", 
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "exonware-xwsystem>=0.0.1",
+    "exonware-xwsystem",
+    # Note: xwschema, xwaction, xwdata, xwnode are available via lazy install
+    # or can be added explicitly if needed
 ]
 
 [[project.authors]]
@@ -42,8 +40,22 @@ dev = [
     "isort>=5.12.0", 
     "mypy>=1.0.0",
 ]
-all = [
-    # Add optional dependencies here
+lazy = [
+    "exonware-xwsystem[lazy]",
+    # Optional dependencies for xwentity composition
+    "exonware-xwschema>=0.0.1",
+    "exonware-xwaction>=0.0.1",
+    "exonware-xwdata>=0.0.1",
+    "exonware-xwnode>=0.0.1",
+]
+full = [
+    # xwentity leverages xwsystem's full capabilities
+    "exonware-xwsystem[full]",
+    # Full dependencies for xwentity composition
+    "exonware-xwschema>=0.0.1",
+    "exonware-xwaction>=0.0.1",
+    "exonware-xwdata>=0.0.1",
+    "exonware-xwnode>=0.0.1",
 ]
 
 [project.urls]
@@ -60,7 +72,7 @@ profile = "black"
 line_length = 88
 
 [tool.mypy]
-python_version = "0.0.1.1"
+python_version = "0.0.1.2"
 strict = true
 warn_return_any = true
 warn_unused_configs = true

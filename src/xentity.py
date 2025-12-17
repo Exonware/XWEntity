@@ -8,7 +8,7 @@ This allows users to import the library in two ways:
 Company: eXonware.com
 Author: Eng. Muhammad AlShehri
 Email: connect@exonware.com
-Version: 0.0.1.1
+Version: 0.0.1.2
 Generation Date: February 2, 2025
 ""
 

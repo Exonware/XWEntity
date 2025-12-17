@@ -14,7 +14,7 @@ from .model import EntityEngine, EntityState, EntityMetadata
 from .errors import xEntityError, xEntityValidationError, xEntityStateError
 from .config import config_manager, PerformanceMode
 from .metaclass import create_xentity_metaclass
-from src.xlib.xsystem import get_logger
+from src.xlib.xwsystem import get_logger
 
 logger = get_logger(__name__)
 

@@ -3,7 +3,7 @@
 **Company:** eXonware.com  
 **Author:** Eng. Muhammad AlShehri  
 **Email:** connect@exonware.com  
-**Version:** 0.0.1.1
+**Version:** 0.0.1.2
 
 ## 🎯 **What is xentity?**
 
@@ -13,7 +13,7 @@ xentity is a powerful Python library for entity management and relationship mode
 
 ### **Installation**
 ```bash
-pip install exonware-xentity
+pip install exonware-xwentity
 ```
 
 ### **Basic Usage**

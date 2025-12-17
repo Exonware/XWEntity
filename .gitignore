@@ -5,6 +5,10 @@
 # CI/CD Tools (keep private)
 .ci/
 
+# Migration/legacy directories (may contain paths too long for Windows)
+MIGRAT/
+MIGRATE/
+
 # ========================================
 # Python
 # ========================================

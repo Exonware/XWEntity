@@ -11,7 +11,7 @@ from functools import wraps
 from .config import config_manager, PerformanceMode
 from src.xlib.xdata.new_3.schema import xSchema
 from src.xlib.xaction import xAction
-from src.xlib.xsystem import get_logger
+from src.xlib.xwsystem import get_logger
 
 logger = get_logger(__name__)
 

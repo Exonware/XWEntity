@@ -26,10 +26,10 @@ from .metaclass import create_xentity_metaclass
 
 # --- System-level Imports (Optional) ---
 try:
-    from src.xlib.xsystem.security import get_resource_limits
-    from src.xlib.xsystem.validation import validate_untrusted_data
-    from src.xlib.xsystem.monitoring import create_component_metrics
-    from src.xlib.xsystem import get_logger
+    from src.xlib.xwsystem.security import get_resource_limits
+    from src.xlib.xwsystem.validation import validate_untrusted_data
+    from src.xlib.xwsystem.monitoring import create_component_metrics
+    from src.xlib.xwsystem import get_logger
     logger = get_logger('xentity.facade')
 except (ImportError, TypeError):
     import logging
