@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.character",
+    "entity_type": "Character",
+    "hierarchy": [
+      "Character"
+    ],
+    "group": "Characters & roles",
+    "description": "Base character entity for Blue's Myth, representing any person in the world."
+  },
+  "schema": {
+    "name": "bluesmyth.character",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "race": {
+        "type": "string"
+      },
+      "lineage": {
+        "type": "string"
+      },
+      "age": {
+        "type": "number"
+      },
+      "class": {
+        "type": "string"
+      },
+      "roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, race, class, roles"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "roles_only": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, roles FROM table"
+      }
+    },
+    "by_age": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, age, class FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

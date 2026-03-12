@@ -1,0 +1,18 @@
+[
+  {
+    "id": "faction_human_empire",
+    "organization_id": "human_empire",
+    "notes": "Dominant human faction ruling the current era."
+  },
+  {
+    "id": "faction_demi_human_remnants",
+    "organization_id": "demi_human_remnants",
+    "notes": "Oppressed demi-human communities and resistance cells."
+  },
+  {
+    "id": "faction_elf_kingdom",
+    "organization_id": "elf_kingdom",
+    "notes": "Elven royal house under Human Empire pressure; holds Elaria."
+  }
+]
+

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "atl_cave_of_spilled_crystals",
+    "host_type": "Dungeon",
+    "host_id": "cave_of_spilled_crystals",
+    "description": "Artificial Tree of Life that recycles monsters and resources within the Cave of Spilled Crystals."
+  },
+  {
+    "id": "atl_skyward_tower",
+    "host_type": "Tower",
+    "host_id": "skyward_tower_city_core",
+    "description": "Artificial Tree of Life embedded in the Skyward Tower, sustaining its rotating ecosystems."
+  }
+]
+

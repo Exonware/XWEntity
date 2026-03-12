@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.contract_event",
+    "entity_type": "ContractEvent",
+    "hierarchy": [
+      "ContractEvent",
+      "StoryBeat"
+    ],
+    "group": "Story structure",
+    "description": "Events specifically centered around forming, breaking, or invoking contracts and oaths."
+  },
+  "schema": {
+    "name": "bluesmyth.contract_event",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "contract_id": {
+        "type": "string"
+      },
+      "event_id": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "contract_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, contract_id, event_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_contract": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, contract_id, event_id FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

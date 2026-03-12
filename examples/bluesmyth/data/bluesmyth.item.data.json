@@ -1,0 +1,48 @@
+[
+  {
+    "id": "blue_first_knife",
+    "name": "First Dungeon Scrap Knife",
+    "item_type": "Sword",
+    "rarity": "common",
+    "owner_id": "blue",
+    "description": "Blue's first self-forged knife from low-grade dungeon ore, marking his start as a blacksmith.",
+    "tags": ["weapon", "beginner_gear"]
+  },
+  {
+    "id": "father_war_hammer",
+    "name": "Rurik's Broken Warhammer",
+    "item_type": "Hammer",
+    "rarity": "legendary_fragment",
+    "owner_id": "blue_father",
+    "description": "The warhammer that once shattered demon armor, now damaged and unused after Rurik lost his arm.",
+    "tags": ["weapon", "relic", "legendary"]
+  },
+  {
+    "id": "mother_royal_blade",
+    "name": "Moonveil Royal Blade",
+    "item_type": "Sword",
+    "rarity": "legendary",
+    "owner_id": "blue_mother",
+    "description": "An elven royal magic knight sword, currently sealed within the Elf King's domain.",
+    "tags": ["weapon", "artifact", "royal"]
+  },
+  {
+    "id": "fairy_crystal",
+    "name": "Fallen Shell Crystal",
+    "item_type": "Artifact",
+    "rarity": "mythic",
+    "owner_id": "blue",
+    "description": "The crystal that fell from the sky housing Lyriel, anchor of their life-oath contract.",
+    "tags": ["artifact", "contract_anchor", "fairy"]
+  },
+  {
+    "id": "luna_staff",
+    "name": "Luna's Arcane Staff",
+    "item_type": "MagicStaff",
+    "rarity": "rare",
+    "owner_id": "luna",
+    "description": "Luna Starweaver's staff, used for protective and utility spells in Blue's party.",
+    "tags": ["weapon", "magic", "party_gear"]
+  }
+]
+

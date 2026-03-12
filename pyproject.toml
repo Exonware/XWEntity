@@ -1,0 +1,125 @@
+# project-src-size=208549 ; 0.20 MB
+
+# Source size (src/*): ~204.0 KB
+[build-system]
+  requires = ["hatchling"]
+  build-backend = "hatchling.build"
+
+[project]
+  name = "exonware-xwentity"
+  dynamic = ["version"]
+  description = "Unified entity model with schema, actions, data, metadata, caching, and performance features"
+  readme = "README.md"
+  requires-python = ">=3.12"
+  keywords = ["entity", "object", "schema", "actions", "data", "metadata", "caching", "exonware"]
+  classifiers = []
+  dependencies = [
+    "exonware-xwaction",  # file-size=356878 ; 0.34 MB
+    "exonware-xwdata",  # file-size=514480 ; 0.49 MB
+    "exonware-xwschema",  # file-size=359128 ; 0.34 MB
+    # total = src + deps ; 1.37 MB
+  ]
+  authors = [
+    { name = "eXonware Backend Team", email = "connect@exonware.com" },
+  ]
+
+  [project.license]
+    text = "MIT"
+
+  [project.optional-dependencies]
+    dev = [
+      "black>=23.0.0",  # file-size=3914855 ; 3.73 MB
+      "exonware-xwaction[dev]",  # file-size=471576084 ; 449.73 MB
+      "exonware-xwdata[dev]",  # file-size=197551718 ; 188.40 MB
+      "exonware-xwlazy",  # file-size=349706 ; 0.33 MB
+      "exonware-xwschema[dev]",  # file-size=235793285 ; 224.87 MB
+      "isort>=5.12.0",  # file-size=568232 ; 0.54 MB
+      "mypy>=1.0.0",  # file-size=29775254 ; 28.40 MB
+      "pytest>=7.0.0",  # file-size=3152415 ; 3.01 MB
+      "pytest-asyncio>=0.21.0",  # file-size=46752 ; 0.04 MB
+      "pytest-cov>=4.0.0",  # file-size=71639 ; 0.07 MB
+      # total = src + deps ; 899.32 MB
+    ]
+    lazy = [
+      "exonware-xwaction[lazy]",  # file-size=21233664 ; 20.25 MB
+      "exonware-xwdata[lazy]",  # file-size=9909043 ; 9.45 MB
+      "exonware-xwlazy",  # file-size=349706 ; 0.33 MB
+      "exonware-xwschema[lazy]",  # file-size=10622074 ; 10.13 MB
+      # total = src + deps ; 40.36 MB
+    ]
+    full = [
+      "atomicwrites",  # file-size=25022 ; 0.02 MB
+      "bottleneck",  # file-size=460187 ; 0.44 MB
+      "cloudpickle",  # file-size=125961 ; 0.12 MB
+      "cython",  # file-size=13606517 ; 12.98 MB
+      "exonware-xwaction[full]",  # file-size=1290272768 ; 1230.50 MB
+      "exonware-xwdata[full]",  # file-size=628264796 ; 599.16 MB
+      "exonware-xwschema[full]",  # file-size=658086297 ; 627.60 MB
+      "interegular",  # file-size=196814 ; 0.19 MB
+      "lz4",  # file-size=277804 ; 0.26 MB
+      "numexpr",  # file-size=742653 ; 0.71 MB
+      "pandas",  # file-size=67223490 ; 64.11 MB
+      "pyarrow",  # file-size=90047710 ; 85.88 MB
+      "pytz",  # file-size=1081137 ; 1.03 MB
+      "regex",  # file-size=1765857 ; 1.68 MB
+      "uarray",  # file-size=225331 ; 0.21 MB
+      # total = src + deps ; 2625.09 MB
+    ]
+
+  [project.urls]
+    Homepage = "https://exonware.com"
+    Documentation = "https://github.com/exonware/xwentity#readme"
+    Repository = "https://github.com/exonware/xwentity"
+
+[tool]
+
+  [tool.black]
+    line-length = 88
+    target-version = ["py312"]
+
+  [tool.isort]
+    profile = "black"
+    line_length = 88
+
+  [tool.mypy]
+    python_version = "0.6.0.1"
+    strict = true
+    warn_return_any = true
+    warn_unused_configs = true
+    disallow_untyped_defs = true
+    disallow_any_generics = true
+    disallow_untyped_calls = true
+    disallow_incomplete_defs = true
+    check_untyped_defs = true
+    disallow_untyped_decorators = true
+    no_implicit_optional = true
+    warn_redundant_casts = true
+    warn_unused_ignores = true
+    warn_no_return = true
+    warn_unreachable = true
+
+  [tool.pytest]
+
+    [tool.pytest.ini_options]
+      testpaths = ["tests"]
+      python_files = ["test_*.py"]
+      python_classes = ["Test*"]
+      python_functions = ["test_*"]
+      addopts = "-v --tb=short"
+      markers = []
+
+  [tool.hatch]
+
+    [tool.hatch.version]
+      path = "src/exonware/xwentity/version.py"
+
+    [tool.hatch.build]
+
+      [tool.hatch.build.targets]
+
+        [tool.hatch.build.targets.wheel]
+          packages = ["src/exonware"]
+          py-modules = ["src/xwentity"]
+
+        [tool.hatch.build.targets.sdist]
+          include = ["/src", "/tests", "/README.md", "/.github"]

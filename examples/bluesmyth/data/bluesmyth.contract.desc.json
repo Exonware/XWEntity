@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.contract",
+    "entity_type": "Contract",
+    "hierarchy": [
+      "Contract",
+      "Bond"
+    ],
+    "group": "Magic, contracts, systems",
+    "description": "Base contract entity for oaths, fairy contracts, and quest contracts."
+  },
+  "schema": {
+    "name": "bluesmyth.contract",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "contract_type": {
+        "type": "string"
+      },
+      "parties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "conditions": {
+        "type": "string"
+      },
+      "consequences": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "contract_type"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, contract_type, parties"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_type": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, contract_type, parties, conditions FROM table"
+      }
+    },
+    "tags": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, contract_type, tags FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

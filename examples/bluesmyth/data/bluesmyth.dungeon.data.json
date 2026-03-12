@@ -1,0 +1,13 @@
+[
+  {
+    "id": "cave_of_spilled_crystals",
+    "name": "Cave of Spilled Crystals",
+    "region_id": "dangerous_demi_human_region",
+    "danger_level": 8,
+    "description": "A living dungeon near Blue's village, known for frequent monster overflows and crystal-rich veins where the boy first gathers materials.",
+    "has_artificial_tree_of_life": true,
+    "master_type": "Dragon (potential future master)",
+    "tags": ["near_village", "childhood_incident_site", "overflow_prone"]
+  }
+]
+

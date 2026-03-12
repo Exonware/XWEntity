@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.country",
+    "entity_type": "Country",
+    "hierarchy": [
+      "Country",
+      "Organization"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "Countries or large political units, with rule type, overlords, economy, and population."
+  },
+  "schema": {
+    "name": "bluesmyth.country",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "organization_id": {
+        "type": "string"
+      },
+      "rule_type": {
+        "type": "string"
+      },
+      "overlord_org_id": {
+        "type": "string"
+      },
+      "main_income_sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "population_estimate": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id",
+      "organization_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, organization_id, rule_type, population_estimate"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "economy": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, organization_id, main_income_sources, population_estimate FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

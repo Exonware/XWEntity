@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.planet_guardian",
+    "entity_type": "PlanetGuardian",
+    "hierarchy": [
+      "PlanetGuardian",
+      "Guardian",
+      "WorldSpirit"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "Specialized guardian type representing the planetary guardian bound to the Tree of Life."
+  },
+  "schema": {
+    "name": "bluesmyth.planet_guardian",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "guardian_id": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "guardian_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, guardian_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_guardian": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, guardian_id, notes FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

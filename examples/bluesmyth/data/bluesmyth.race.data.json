@@ -1,0 +1,28 @@
+[
+  {
+    "id": "race_human",
+    "name": "Human",
+    "description": "Dominant race in the current era, victors of the Great Demi-Human War and rulers of the Human Empire."
+  },
+  {
+    "id": "race_elf",
+    "name": "Elf",
+    "description": "Graceful demi-humans formerly ruling royal kingdoms, now largely enslaved or oppressed."
+  },
+  {
+    "id": "race_dwarf",
+    "name": "Dwarf",
+    "description": "Stout demi-humans known for their blacksmithing, mining, and combat prowess, now also subjugated."
+  },
+  {
+    "id": "race_demi_human_mixed",
+    "name": "Mixed-Blood Demi-Human",
+    "description": "Mixed-lineage demi-humans like Blue who carry traits of multiple races."
+  },
+  {
+    "id": "race_fairy",
+    "name": "Fairy",
+    "description": "Mystical beings tied to the Tree of Life, many of whom sacrificed themselves to form the crystal shell."
+  }
+]
+

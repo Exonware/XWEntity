@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.dungeon_floor",
+    "entity_type": "DungeonFloor",
+    "hierarchy": [
+      "DungeonFloor",
+      "SubLocation"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "Individual floors or layers inside a dungeon."
+  },
+  "schema": {
+    "name": "bluesmyth.dungeon_floor",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "dungeon_id": {
+        "type": "string"
+      },
+      "index": {
+        "type": "number"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "dungeon_id",
+      "index"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, dungeon_id, index"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_dungeon": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, dungeon_id, index FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

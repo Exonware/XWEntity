@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.quest",
+    "entity_type": "Quest",
+    "hierarchy": [
+      "Quest",
+      "StoryBeat"
+    ],
+    "group": "Story structure",
+    "description": "Quests that drive Blue's progression, both personal and guild-assigned."
+  },
+  "schema": {
+    "name": "bluesmyth.quest",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "giver_id": {
+        "type": "string"
+      },
+      "target_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "description": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "quest_type": {
+        "type": "string"
+      },
+      "rewards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "reward_type": {
+              "type": "string"
+            },
+            "item_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "amount": {
+              "type": "number"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "participants": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "character_id": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "id",
+      "title"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, title, status"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_status": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, title, status, quest_type FROM table"
+      }
+    },
+    "participants": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, title, participants FROM table"
+      }
+    },
+    "rewards": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, title, rewards FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

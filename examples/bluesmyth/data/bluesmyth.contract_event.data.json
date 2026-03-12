@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ce_fairy_contract_formation",
+    "contract_id": "fairy_life_oath_blue",
+    "event_id": "event_fairy_contract_formed",
+    "description": "The moment Lyriel forms a life-binding contract with Blue after descending in the crystal."
+  },
+  {
+    "id": "ce_mother_oath_reveal",
+    "contract_id": "mother_protect_rurik_oath",
+    "event_id": "event_truth_revealed_about_mother",
+    "description": "Rurik reveals the existence of the life-oath contract that binds Elaria's fate to his survival."
+  }
+]
+

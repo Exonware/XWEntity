@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.item",
+    "entity_type": "Item",
+    "hierarchy": [
+      "Item"
+    ],
+    "group": "Items, equipment, materials",
+    "description": "Base item entity for weapons, armor, materials, artifacts, and other objects."
+  },
+  "schema": {
+    "name": "bluesmyth.item",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "item_type": {
+        "type": "string"
+      },
+      "rarity": {
+        "type": "string"
+      },
+      "owner_id": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, item_type, rarity"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_owner": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, owner_id, item_type FROM table"
+      }
+    },
+    "by_rarity": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, rarity, item_type FROM table"
+      }
+    },
+    "tags": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, tags FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

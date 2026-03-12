@@ -1,0 +1,80 @@
+[
+  {
+    "id": "blue",
+    "name": "Blue",
+    "race": "Half-Elf, Half-Dwarf",
+    "lineage": "Elven royal magic knight mother × dwarven hero blacksmith father",
+    "age": 12,
+    "class": "Blacksmith-Knight",
+    "roles": ["MainCharacter", "PlayerCharacter", "Adventurer", "Blacksmith"],
+    "tags": ["protagonist", "dungeon_explorer", "party_leader"],
+    "description": "Protagonist of Blue's Myth. A talented young blacksmith and adventurer born to an elven royal magic knight and a dwarven hero smith."
+  },
+  {
+    "id": "blue_father",
+    "name": "Rurik Ironleaf",
+    "race": "Dwarf",
+    "lineage": "Dwarven hero blacksmith from the old demi-human armies",
+    "age": 45,
+    "class": "Master Blacksmith",
+    "roles": ["Mentor", "SupportingCharacter", "DemiHuman"],
+    "tags": ["one_armed_veteran", "village_defender", "parent"],
+    "description": "Blue's father, a dwarven hero and master blacksmith who lost an arm in the war and stayed behind to raise his children."
+  },
+  {
+    "id": "blue_mother",
+    "name": "Elaria Moonblade",
+    "race": "Elf",
+    "lineage": "Elven royal magic knight of the old kingdom",
+    "age": 0,
+    "class": "Royal Magic Knight",
+    "roles": ["SupportingCharacter", "MagicKnight", "DemiHuman"],
+    "tags": ["captured", "royalty", "swordmaster", "mage"],
+    "description": "Blue's mother, an elven royal magic knight who sacrificed herself by oath to save Rurik and is now held by the Elf King."
+  },
+  {
+    "id": "fairy_guardian_shard",
+    "name": "Lyriel",
+    "race": "Crystal Fairy",
+    "lineage": "Fragment of the planet's sacrificial fairy race linked to the crystal shell",
+    "age": 1000,
+    "class": "Guardian Guide",
+    "roles": ["Fairy", "GuardianSpirit", "SupportingCharacter"],
+    "tags": ["contracted_spirit", "companion", "guide"],
+    "description": "A light-blue fairy who descended in a crystal to save Blue, forming a contract to be taken to the Guardian of the Tree of Life in nine years."
+  },
+  {
+    "id": "childhood_friend",
+    "name": "Mira",
+    "race": "Demi-human",
+    "lineage": "Village-born mixed blood",
+    "age": 9,
+    "class": "Aspiring Adventurer",
+    "roles": ["SupportingCharacter", "NonPlayerCharacter"],
+    "tags": ["childhood_friend", "party_member_candidate"],
+    "description": "Blue's childhood friend from the village, the girl he protects during the first dungeon overflow incident."
+  },
+  {
+    "id": "younger_sister",
+    "name": "Lina",
+    "race": "Half-Elf, Half-Dwarf",
+    "lineage": "Younger sister of Blue",
+    "age": 5,
+    "class": "Civilian",
+    "roles": ["SupportingCharacter"],
+    "tags": ["family", "sister"],
+    "description": "Blue's little sister, one of the reasons his father chooses to stay in the village instead of going to rescue Elaria."
+  },
+  {
+    "id": "luna",
+    "name": "Luna Starweaver",
+    "race": "Human",
+    "lineage": "Descendant of an ancient arcane bloodline",
+    "age": 16,
+    "class": "Magician",
+    "roles": ["SupportingCharacter", "Magician"],
+    "tags": ["spellcaster", "party_mage", "arcane_scholar"],
+    "description": "A young magician who joined Blue's party, specializing in protective and utility magic."
+  }
+]
+

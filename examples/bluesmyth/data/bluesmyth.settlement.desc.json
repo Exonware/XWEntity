@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.settlement",
+    "entity_type": "Settlement",
+    "hierarchy": [
+      "Settlement",
+      "Location"
+    ],
+    "group": "Locations & settlements",
+    "description": "Cities, villages, and similar settlements with economic and political metadata."
+  },
+  "schema": {
+    "name": "bluesmyth.settlement",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "location_id": {
+        "type": "string"
+      },
+      "settlement_type": {
+        "type": "string"
+      },
+      "country_id": {
+        "type": "string"
+      },
+      "rule_type": {
+        "type": "string"
+      },
+      "ruler_org_id": {
+        "type": "string"
+      },
+      "main_income_sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "population_estimate": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id",
+      "location_id",
+      "settlement_type"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, settlement_type, country_id, population_estimate"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_country": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, settlement_type, country_id, location_id FROM table"
+      }
+    },
+    "economy": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, main_income_sources, population_estimate FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

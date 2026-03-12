@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.guardian",
+    "entity_type": "Guardian",
+    "hierarchy": [
+      "Guardian",
+      "WorldSpirit"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "Planetary guardian entities created by Exonalixe Deolopia to protect and guide worlds."
+  },
+  "schema": {
+    "name": "bluesmyth.guardian",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "planet_id": {
+        "type": "string"
+      },
+      "tree_of_life_id": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "planet_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, planet_id, tree_of_life_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_planet": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, planet_id, tree_of_life_id FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

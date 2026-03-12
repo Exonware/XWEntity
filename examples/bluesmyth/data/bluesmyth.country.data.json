@@ -1,0 +1,19 @@
+[
+  {
+    "id": "country_human_empire",
+    "organization_id": "human_empire",
+    "rule_type": "Imperial monarchy with centralized human supremacy",
+    "overlord_org_id": null,
+    "main_income_sources": ["Dungeon exploitation", "Tower exploitation", "Slave labor", "War spoils"],
+    "population_estimate": 50000000
+  },
+  {
+    "id": "country_elf_kingdom",
+    "organization_id": "elf_kingdom",
+    "rule_type": "Royal monarchy under political pressure from the Human Empire",
+    "overlord_org_id": "human_empire",
+    "main_income_sources": ["High-magic crafts", "Ancient artifacts", "Managed dungeons and forests"],
+    "population_estimate": 500000
+  }
+]
+

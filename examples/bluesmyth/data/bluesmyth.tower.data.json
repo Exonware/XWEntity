@@ -1,0 +1,12 @@
+[
+  {
+    "id": "skyward_tower_city_core",
+    "name": "Skyward Tower Core",
+    "city_id": "settlement_skyward_tower_city",
+    "danger_level": 7,
+    "description": "Central tower structure around which the neighboring city is built. Its rotating floors support trade, training, and high-risk expeditions.",
+    "has_artificial_tree_of_life": true,
+    "tags": ["tower_city_core", "adventurer_hub"]
+  }
+]
+

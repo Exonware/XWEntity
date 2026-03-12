@@ -1,0 +1,57 @@
+[
+  {
+    "id": "dangerous_demi_human_region",
+    "name": "Demi-Human Refuge Region",
+    "kind": "Region",
+    "parent_id": null,
+    "danger_level": 6,
+    "description": "A remote region where demi-humans hide from human slavers, filled with monster threats from nearby dungeons.",
+    "tags": ["demi_human_refuge", "monster_prone"]
+  },
+  {
+    "id": "village_outskirts",
+    "name": "Demi-Human Refuge Village",
+    "kind": "Village",
+    "parent_id": "dangerous_demi_human_region",
+    "danger_level": 6,
+    "description": "Blue's home village near the Cave of Spilled Crystals, constantly threatened by dungeon overflows.",
+    "tags": ["village", "blue_home", "dungeon_nearby"]
+  },
+  {
+    "id": "neighboring_tower_city",
+    "name": "Skyward Tower City",
+    "kind": "TowerCity",
+    "parent_id": null,
+    "danger_level": 7,
+    "description": "A city built around a massive tower, serving as an adventurer and trade hub.",
+    "tags": ["city", "tower_city", "adventurer_hub"]
+  },
+  {
+    "id": "world_tree_core",
+    "name": "Core Tree of Life",
+    "kind": "CoreChamber",
+    "parent_id": null,
+    "danger_level": 10,
+    "description": "The chamber at the planet's core where the true Tree of Life and its Guardian reside.",
+    "tags": ["world_core", "tree_of_life", "guardian_domain"]
+  },
+  {
+    "id": "road_to_skyward",
+    "name": "Road to Skyward Tower City",
+    "kind": "Road",
+    "parent_id": "dangerous_demi_human_region",
+    "danger_level": 4,
+    "description": "Trade and adventurer route linking the demi-human region to the Skyward Tower City.",
+    "tags": ["road", "trade_route"]
+  },
+  {
+    "id": "ironcross_town",
+    "name": "Ironcross Town",
+    "kind": "Town",
+    "parent_id": "road_to_skyward",
+    "danger_level": 3,
+    "description": "Small town along the road to Skyward Tower City; waystation and guild outpost.",
+    "tags": ["town", "waystation"]
+  }
+]
+

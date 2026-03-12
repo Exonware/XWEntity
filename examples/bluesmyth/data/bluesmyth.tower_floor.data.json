@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tf_skyward_bazaar",
+    "tower_id": "skyward_tower_city_core",
+    "index": 2,
+    "description": "Trading floor where dungeon and tower materials are bought and sold."
+  },
+  {
+    "id": "tf_skyward_training_floor",
+    "tower_id": "skyward_tower_city_core",
+    "index": 5,
+    "description": "A mid-level floor in the Skyward Tower used for adventurer training and rank trials."
+  },
+  {
+    "id": "tf_skyward_arena",
+    "tower_id": "skyward_tower_city_core",
+    "index": 8,
+    "description": "Combat arena for rank trials and monster simulations."
+  }
+]

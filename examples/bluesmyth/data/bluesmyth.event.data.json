@@ -1,0 +1,24 @@
+[
+  {
+    "id": "event_blue_self_sacrifice",
+    "scene_id": "scene_dungeon_overflow_childhood",
+    "title": "Blue's Self-Sacrifice Attempt",
+    "kind": "TurningPoint",
+    "summary": "Blue decides that his life should be the one to end, not his father's, and attacks the monster to protect him and his friend."
+  },
+  {
+    "id": "event_fairy_contract_formed",
+    "scene_id": "scene_crystal_falls",
+    "title": "Formation of the Fairy Contract",
+    "kind": "ContractEvent",
+    "summary": "Lyriel offers to save everyone in exchange for Blue's promise to take her to the Guardian of the Tree of Life in nine years."
+  },
+  {
+    "id": "event_truth_revealed_about_mother",
+    "scene_id": "scene_truth_about_mother",
+    "title": "Truth About Mother's Oath",
+    "kind": "Reveal",
+    "summary": "Rurik explains the life-oath that binds Elaria's fate to his choice to survive and raise their children."
+  }
+]
+

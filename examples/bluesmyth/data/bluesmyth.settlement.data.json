@@ -1,0 +1,33 @@
+[
+  {
+    "id": "settlement_demi_human_village",
+    "location_id": "village_outskirts",
+    "settlement_type": "Village",
+    "country_id": null,
+    "rule_type": "Informal village council under shadow of Human Empire rule",
+    "ruler_org_id": "demi_human_remnants",
+    "main_income_sources": ["Small-scale farming", "Gathering dungeon materials", "Local crafts"],
+    "population_estimate": 800
+  },
+  {
+    "id": "settlement_skyward_tower_city",
+    "location_id": "neighboring_tower_city",
+    "settlement_type": "TowerCity",
+    "country_id": "country_human_empire",
+    "rule_type": "Imperial city governed through guilds and tower administrators",
+    "ruler_org_id": "human_empire",
+    "main_income_sources": ["Tower expeditions", "Trade", "Adventurer services"],
+    "population_estimate": 120000
+  },
+  {
+    "id": "settlement_ironcross_town",
+    "location_id": "ironcross_town",
+    "settlement_type": "Town",
+    "country_id": "country_human_empire",
+    "rule_type": "Imperial outpost with guild presence",
+    "ruler_org_id": "human_empire",
+    "main_income_sources": ["Trade", "Waystation", "Dungeon material resale"],
+    "population_estimate": 3500
+  }
+]
+

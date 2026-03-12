@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.location",
+    "entity_type": "Location",
+    "hierarchy": [
+      "Location"
+    ],
+    "group": "Locations & settlements",
+    "description": "Generic location entity for settlements, regions, sublocations, and special areas."
+  },
+  "schema": {
+    "name": "bluesmyth.location",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "parent_id": {
+        "type": "string"
+      },
+      "danger_level": {
+        "type": "number"
+      },
+      "description": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, kind, danger_level"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_kind": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, kind, parent_id FROM table"
+      }
+    },
+    "dangerous": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, danger_level, tags FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

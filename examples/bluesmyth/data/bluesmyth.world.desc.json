@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.world",
+    "entity_type": "World",
+    "hierarchy": [
+      "World",
+      "Setting"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "World-level entity for the setting of Blue's Myth."
+  },
+  "schema": {
+    "name": "bluesmyth.world",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "world_name": {
+        "type": "string"
+      },
+      "era": {
+        "type": "string"
+      },
+      "main_threat": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "world_name"
+    ]
+  },
+  "actions": {
+    "describe_world": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT world_name, era, main_threat"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "tags": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, world_name, tags FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

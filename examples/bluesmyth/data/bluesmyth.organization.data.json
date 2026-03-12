@@ -1,0 +1,57 @@
+[
+  {
+    "id": "human_empire",
+    "name": "Human Empire",
+    "org_type": "HumanEmpire",
+    "location_id": null,
+    "status": "dominant",
+    "description": "The ruling human power that won the 5000-year war, enslaving demi-humans and once allied with demons.",
+    "tags": ["nation", "antagonistic_system"]
+  },
+  {
+    "id": "demi_human_remnants",
+    "name": "Demi-Human Remnants",
+    "org_type": "DemiHumanResistance",
+    "location_id": "dangerous_demi_human_region",
+    "status": "oppressed",
+    "description": "Scattered communities of elves, dwarves, and other demi-humans living as slaves or hidden refugees.",
+    "tags": ["oppressed", "refugees"]
+  },
+  {
+    "id": "village_adventurer_guild",
+    "name": "Village Adventurer Guild",
+    "org_type": "AdventurerGuild",
+    "location_id": "village_outskirts",
+    "status": "active",
+    "description": "Local guild near Blue's village that manages dungeon quotas and overflow cleanup.",
+    "tags": ["guild", "local"]
+  },
+  {
+    "id": "skyward_adventurer_guild",
+    "name": "Skyward Adventurer Guild",
+    "org_type": "AdventurerGuild",
+    "location_id": "neighboring_tower_city",
+    "status": "active",
+    "description": "Prestigious guild controlling exploration of the Skyward Tower and ranking rising adventurers like Blue.",
+    "tags": ["guild", "prestigious"]
+  },
+  {
+    "id": "ironroot_smiths",
+    "name": "Ironroot Smiths",
+    "org_type": "SmithingClan",
+    "location_id": "village_outskirts",
+    "status": "hidden",
+    "description": "Dwarven-rooted smithing lineage tied to Rurik and ancient blacksmith traditions.",
+    "tags": ["clan", "smithing"]
+  },
+  {
+    "id": "elf_kingdom",
+    "name": "Elf Kingdom",
+    "org_type": "RoyalHouse",
+    "location_id": null,
+    "status": "subjugated",
+    "description": "Formerly proud elven royal kingdom, now under heavy pressure or indirect control from the Human Empire. Holds Elaria as an oath-bound prisoner of the Elf King.",
+    "tags": ["kingdom", "royal_house", "under_human_pressure"]
+  }
+]
+

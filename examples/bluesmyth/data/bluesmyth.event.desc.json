@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.event",
+    "entity_type": "Event",
+    "hierarchy": [
+      "Event",
+      "StoryBeat"
+    ],
+    "group": "Story structure",
+    "description": "Key story beats such as turning points, reveals, and contracts."
+  },
+  "schema": {
+    "name": "bluesmyth.event",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "scene_id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "scene_id",
+      "title"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, scene_id, title, kind"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_kind": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, scene_id, title, kind FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

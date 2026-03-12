@@ -1,0 +1,20 @@
+[
+  {
+    "id": "overflow_beast_childhood",
+    "name": "Overflow Beast of the Cave",
+    "monster_type": "BossMonster",
+    "dungeon_id": "cave_of_spilled_crystals",
+    "rank": "mid-tier",
+    "description": "The strong monster that slipped past adventurers during a dungeon break and nearly killed Blue, triggering the fairy's descent.",
+    "tags": ["childhood_incident", "overflow", "story_trigger"]
+  },
+  {
+    "id": "cave_crawler_common",
+    "name": "Cave Crawler",
+    "monster_type": "Common",
+    "dungeon_id": "cave_of_spilled_crystals",
+    "rank": "low",
+    "description": "Common dungeon mob in the Cave of Spilled Crystals; often harvested for materials.",
+    "tags": ["common", "dungeon_mob", "materials"]
+  }
+]

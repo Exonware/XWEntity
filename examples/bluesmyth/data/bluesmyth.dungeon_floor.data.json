@@ -1,0 +1,20 @@
+[
+  {
+    "id": "df_cave_entrance",
+    "dungeon_id": "cave_of_spilled_crystals",
+    "index": 1,
+    "description": "Entrance level of the Cave of Spilled Crystals, where Blue first gathers ore with his friends."
+  },
+  {
+    "id": "df_cave_crystal_vein",
+    "dungeon_id": "cave_of_spilled_crystals",
+    "index": 2,
+    "description": "Crystal-rich vein layer where overflow monsters sometimes slip through."
+  },
+  {
+    "id": "df_cave_deep",
+    "dungeon_id": "cave_of_spilled_crystals",
+    "index": 3,
+    "description": "Deeper layer approaching the dungeon core; higher danger level."
+  }
+]

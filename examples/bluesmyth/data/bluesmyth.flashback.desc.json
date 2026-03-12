@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.flashback",
+    "entity_type": "Flashback",
+    "hierarchy": [
+      "Flashback",
+      "StoryBeat"
+    ],
+    "group": "Story structure",
+    "description": "Flashback beats that revisit past events in Blue's Myth."
+  },
+  "schema": {
+    "name": "bluesmyth.flashback",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "event_id": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "event_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, event_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_event": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, event_id, summary FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

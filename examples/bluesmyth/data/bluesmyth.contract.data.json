@@ -1,0 +1,21 @@
+[
+  {
+    "id": "fairy_life_oath_blue",
+    "contract_type": "FairyContract",
+    "parties": ["blue", "fairy_guardian_shard"],
+    "conditions": "Lyriel saves Blue and the others from the dungeon monster; in nine years Blue must take her to the Guardian of the Tree of Life.",
+    "consequences": "If Blue fails the oath, the contract may consume his life or sever Lyriel's link to the world.",
+    "description": "Core fairy contract that binds Blue's growth and long-term quest to the Guardian of the Tree of Life.",
+    "tags": ["life_oath", "fairy_contract", "story_core"]
+  },
+  {
+    "id": "mother_protect_rurik_oath",
+    "contract_type": "LifeOath",
+    "parties": ["blue_mother", "blue_father"],
+    "conditions": "Elaria offers herself to the Elf King to save Rurik's life; Rurik must live on and take care of their children.",
+    "consequences": "If Rurik breaks the promise and throws his life away, Elaria dies by the power of the oath.",
+    "description": "Tragic life oath that keeps Rurik from going on a suicidal rescue and anchors the family drama.",
+    "tags": ["life_oath", "sacrifice", "backstory_core"]
+  }
+]
+

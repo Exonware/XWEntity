@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.faction",
+    "entity_type": "Faction",
+    "hierarchy": [
+      "Faction",
+      "Organization"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "High-level factions that include nations, alliances, and resistance groups."
+  },
+  "schema": {
+    "name": "bluesmyth.faction",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "organization_id": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "organization_id"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, organization_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_org": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, organization_id, notes FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

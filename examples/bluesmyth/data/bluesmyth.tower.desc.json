@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.tower",
+    "entity_type": "Tower",
+    "hierarchy": [
+      "Tower",
+      "ArcaneStructure",
+      "Location"
+    ],
+    "group": "World / cosmos / meta",
+    "description": "Semi-sentient tower structures whose floors host rotating ecosystems and economies."
+  },
+  "schema": {
+    "name": "bluesmyth.tower",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "city_id": {
+        "type": "string"
+      },
+      "danger_level": {
+        "type": "number"
+      },
+      "description": {
+        "type": "string"
+      },
+      "has_artificial_tree_of_life": {
+        "type": "boolean"
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, danger_level"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_city": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, city_id, danger_level FROM table"
+      }
+    },
+    "tags": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, name, tags FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

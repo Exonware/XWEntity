@@ -1,0 +1,24 @@
+[
+  {
+    "id": "scene_dungeon_overflow_childhood",
+    "arc_id": "arc_childhood_and_fairy_contract",
+    "title": "Dungeon Overflow Near the Village",
+    "location_id": "village_outskirts",
+    "summary": "Blue and his friends gather materials near the Cave of Spilled Crystals when a strong monster slips through an overflow and attacks."
+  },
+  {
+    "id": "scene_crystal_falls",
+    "arc_id": "arc_childhood_and_fairy_contract",
+    "title": "The Crystal Falls from the Sky",
+    "location_id": "village_outskirts",
+    "summary": "As Blue is about to die protecting his friend, a huge crystal crashes down from the sky, killing the monster and revealing the fairy Lyriel."
+  },
+  {
+    "id": "scene_truth_about_mother",
+    "arc_id": "arc_truth_about_mother",
+    "title": "Rurik's Confession",
+    "location_id": "village_outskirts",
+    "summary": "Rurik tells Blue the truth about Elaria's oath, his lost arm, and why he stayed instead of going to rescue her."
+  }
+]
+

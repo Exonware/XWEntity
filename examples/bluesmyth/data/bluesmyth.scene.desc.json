@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "schema_name": "bluesmyth.scene",
+    "entity_type": "Scene",
+    "hierarchy": [
+      "Scene",
+      "StoryPart"
+    ],
+    "group": "Story structure",
+    "description": "Concrete scene within a story arc, such as a specific incident or conversation."
+  },
+  "schema": {
+    "name": "bluesmyth.scene",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "arc_id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "location_id": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "arc_id",
+      "title"
+    ]
+  },
+  "actions": {
+    "summary": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, arc_id, title, location_id"
+      }
+    },
+    "full": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table"
+      }
+    },
+    "by_arc": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT id, arc_id, title, location_id FROM table"
+      }
+    },
+    "select_where": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table WHERE id = '$id'"
+      }
+    },
+    "select_order": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table ORDER BY id"
+      }
+    },
+    "select_limit": {
+      "query": {
+        "format": "xwqs",
+        "query": "SELECT * FROM table LIMIT 5"
+      }
+    },
+    "update_field": {
+      "query": {
+        "format": "xwqs",
+        "query": "UPDATE table SET description = 'Updated' WHERE id = '$id'"
+      }
+    },
+    "delete_by_id": {
+      "query": {
+        "format": "xwqs",
+        "query": "DELETE FROM table WHERE id = '$id'"
+      }
+    },
+    "insert_row": {
+      "query": {
+        "format": "xwqs",
+        "query": "INSERT INTO table (id, name) VALUES ('new_id', 'New Name')"
+      }
+    }
+  }
+}

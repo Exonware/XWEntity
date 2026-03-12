@@ -1,0 +1,67 @@
+[
+  {
+    "id": "quest_rescue_mother",
+    "title": "Rescue Elaria from the Elf King",
+    "giver_id": "blue_father",
+    "target_id": "blue_mother",
+    "description": "Long-term personal quest to become strong enough to challenge the Elf Kingdom and free Elaria from her oath-bound captivity.",
+    "status": "planned",
+    "quest_type": "MainQuest",
+    "rewards": [
+      {
+        "reward_type": "Story",
+        "item_id": null,
+        "amount": 0,
+        "description": "Reuniting the family, freeing Elaria, and changing the balance of power between humans and demi-humans."
+      }
+    ],
+    "participants": [
+      { "character_id": "blue", "role": "Protagonist" },
+      { "character_id": "blue_mother", "role": "RescueTarget" },
+      { "character_id": "blue_father", "role": "QuestGiver" }
+    ]
+  },
+  {
+    "id": "quest_take_fairy_to_guardian",
+    "title": "Escort Lyriel to the Guardian",
+    "giver_id": "fairy_guardian_shard",
+    "target_id": "planet_guardian_main",
+    "description": "Life-binding quest where Blue must bring Lyriel to the Guardian of the Tree of Life within nine years of their contract.",
+    "status": "active",
+    "quest_type": "MainQuest",
+    "rewards": [
+      {
+        "reward_type": "Lore",
+        "item_id": null,
+        "amount": 0,
+        "description": "Audience with the planetary Guardian, deeper understanding of the Tree of Life and the world's true systems."
+      }
+    ],
+    "participants": [
+      { "character_id": "blue", "role": "Protagonist" },
+      { "character_id": "fairy_guardian_shard", "role": "QuestGiver" }
+    ]
+  },
+  {
+    "id": "quest_clear_cave_crawlers",
+    "title": "Clear Cave Crawlers (Guild Request)",
+    "giver_id": "village_adventurer_guild",
+    "target_id": null,
+    "description": "Guild request to thin cave crawler population at the Cave of Spilled Crystals entrance layer.",
+    "status": "active",
+    "quest_type": "SideQuest",
+    "rewards": [
+      {
+        "reward_type": "Materials",
+        "item_id": null,
+        "amount": 1,
+        "description": "Dungeon ore and crystal shards."
+      }
+    ],
+    "participants": [
+      { "character_id": "blue", "role": "Leader" },
+      { "character_id": "luna", "role": "PartyMember" }
+    ]
+  }
+]
+
